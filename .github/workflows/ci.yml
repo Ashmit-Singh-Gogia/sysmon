@@ -23,7 +23,7 @@ jobs:
       - name: Run golangci-lint
         uses: golangci/golangci-lint-action@v6
         with:
-          version: v1.56.2 # It is best practice to tell it exactly which version of the linter to use
+          version: v1.64 # It is best practice to tell it exactly which version of the linter to use
       # ----------------------------
 
       - name: Install dependencies
