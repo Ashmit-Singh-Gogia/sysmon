@@ -1,0 +1,9 @@
+# Go binaries
+/dist
+sysmon
+
+# Test binaries
+*.test
+
+# Environment variables
+.env
