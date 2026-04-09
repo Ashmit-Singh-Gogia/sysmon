@@ -3,13 +3,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/Ashmit-Singh-Gogia/sysmon/internal/proc"
+	"github.com/Ashmit-Singh-Gogia/sysmon/internal/collector"
 )
 
 func main() {
-	snap, err := proc.ReadStat()
-	if err != nil {
-		fmt.Println("There is some error in main file")
-	}
-	fmt.Println(snap.Total.ID)
+	stats := collector.InitStats()
+	fmt.Println(stats.CPUDetails.TotalUsage)
 }
