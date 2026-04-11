@@ -45,7 +45,9 @@ func ReadStat() (metrics.CPUSnapshot, error) {
 	if err != nil {
 		return metrics.CPUSnapshot{}, err
 	}
-	defer file.Close()
+	defer func() {
+		_ = file.Close()
+	}()
 
 	return parseStatFromReader(file, time.Now)
 }
